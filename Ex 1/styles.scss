@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:hover .left {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: 2s ease-in-out;
+    //animation-iteration-count: infinite;
+    @keyframes move {
+      0% {
+      }
+
+      50% {
+        transform: translateX(-50px) skewY(-20deg);
+      }
+    }
+  }
+
+  &:hover .right {
+    animation-name: move2;
+    animation-duration: 3s;
+    animation-timing-function: 2s ease-in-out;
+    //animation-iteration-count: infinite;
+
+    @keyframes move2 {
+      0% {
+      }
+
+      50% {
+        transform: translateX(50px) skewY(20deg);
+      }
+    }
+  }
+}
+
+.left,
+.right {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+  transition: 2s ease;
+}
+
+.text {
+  //display: none;
+  position: absolute;
+  z-index: -1;
+}
